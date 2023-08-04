@@ -26,3 +26,15 @@
 """
 
 ip = "192.168.3.1"
+l = ip.split('.')
+res_des = list()
+for el in l:
+  el = el + ' ' * (10-len(el))
+  res_des.append(el)
+print(*res_des)
+res_dv = list()
+dv = list()
+for el in l:
+  b = '0'*(8-len(bin(int(el))[2:])) + bin(int(el))[2:] + '  '
+  res_dv.append(b)
+print(*res_dv)
